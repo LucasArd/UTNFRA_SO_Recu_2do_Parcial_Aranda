@@ -1,0 +1,6 @@
+#####################################
+#
+# CPU Modelo : AMD Ryzen 5 4600H with Radeon Graphics
+# Frecuencia : 4600Hz
+#
+#####################################

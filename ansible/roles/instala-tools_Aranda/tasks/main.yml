@@ -1,0 +1,29 @@
+---
+# tasks file for instala-tools_Aranda
+#
+- name: Update apt package list (Debian/Ubuntu)
+  apt:
+    update_cache: yes
+  when: ansible_os_family == "Debian"
+
+- name: Ensure required packages are installed (Debian/Ubuntu)
+  apt:
+    name:
+      - htop
+      - net-tools
+      - tmux
+      - tree
+      - speedtest-cli
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Ensure required packages are installed (RedHat/CentOS)
+  yum:
+    name:
+      - htop
+      - net-tools
+      - tmux
+      - tree
+      - speedtest-cli
+    state: present
+  when: ansible_os_family == "RedHat"

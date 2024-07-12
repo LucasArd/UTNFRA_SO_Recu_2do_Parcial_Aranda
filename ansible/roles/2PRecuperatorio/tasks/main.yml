@@ -1,0 +1,25 @@
+---
+# tasks file for 2PRecuperatorio
+
+ - name: "Rol: 2PRecuperatorio"
+   setup:
+
+ - name: Creacion directorio
+   file:
+     path: /tmp/alumno
+     state: directory
+     mode: '0755'
+
+ - name: Create /tmp/alumno/datos.txt
+   copy:
+     content: |
+       Nombre: Lucas Apellido: Aranda
+       División: 311
+       Fecha: 11/07/2021
+       —-------------------------
+       Distribución: Ryzen 5 AMD
+       Cantidad de Cores: 2
+     dest: /tmp/alumno/datos.txt
+     mode: '0644'
+
+
